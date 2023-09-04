@@ -1,0 +1,68 @@
+@use "sass:math";
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// colors
+
+$Primary: #30A2FF !default;
+$Secondary: #8AEA92 !default;
+
+// Cherry Redd Dark, Off-White THEME-1
+$Cherry-Red-Dark: #990011 !default;
+$Off-White: #FCF6F5 !default;
+
+//  Peach , Burnt Orangee THEME-2
+$Peach: #FCEDDA !default;
+$Burnt-Orange: #EE4E34 !default;
+
+// Light Bluee, Dark Bluee THEME-3
+$Light-Blue: #ADD8E6 !default;
+$Dark-Blue: #00008B !default;
+$Forest-Green: #3A6B35 !default;
+
+// Cherry Redd, Bubblegum Pinkk THEME-4
+$Cherry-Red: #CC313D !default;
+$Bubblegum-Pink: #F7C5CC !default;
+
+// Light Purplee #AA96DA, Mint #C5FAD5, Butter #FFFFD2 THEME-5
+$Light-Purple: #AA96DA !default;
+$Mint: #C5FAD5 !default;
+$Butter: #FFFFD2 !default;
+
+//  Island Greenn, Lil-White THEME-6
+$Island-Green: #2BAE66 !default;
+$Lil-White: #FCF6F5 !default;
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Spacing
+
+$base-padding: .75rem !default;
+$base-margin: .75rem !default;
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// border-radius and box-shadow
+
+$base-border-thickness: .1rem  !default;
+$base-border-radius: .5rem !default;
+$base-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px 0px !default;
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// gap value to iterate
+
+$grid-columns: 13 !default;
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// font sizes
+$base-font_size: 1rem  !default;
+
+$font-size-xxsm:  math.div($base-font_size, 1.3)  !default;
+$font-size-xmsm: math.div($base-font_size, 1.2)  !default;
+$font-size-xsm: $base-font_size * 1.1  !default;
+$font-size-sm: $base-font_size * 1.35  !default;
+$font-size-m: $base-font_size * 1.45  !default;
+$font-size-l: $base-font_size * 1.75  !default;
+$font-size-xl: $base-font_size * 2  !default;
+$font-size-xxl: $base-font_size * 2.5  !default;
+$font-size-xxxl: $base-font_size * 3.5  !default;

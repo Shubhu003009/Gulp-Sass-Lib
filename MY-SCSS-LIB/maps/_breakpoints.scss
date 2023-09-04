@@ -1,0 +1,19 @@
+
+// dekstop 1st approach
+$breakpoints: (
+    "xs":0px,
+    "sm":480px,
+    "md":720px,
+    "lg":960px,
+    "xl":1200px,
+);
+
+// mobile 1st approach
+$breakpoints-max: (
+    "xs-max":400px,
+    "sm-max":540px,
+    "md-max":768px,
+    "lg-max":958px,
+    "xlg-max":1199px,
+    "xxlg-max":1399px,
+);

@@ -1,0 +1,16 @@
+:root{
+
+
+    // $color_map MAP COLORS
+    @each $color-name, $color in $color_map{
+        --#{$color-name}: #{$color};
+    }  
+
+    // $color-themes MAP COLORS
+    @each $theme, $colors in $color-themes {
+        @each $color, $val in $colors {
+            
+                --clr-#{$theme}-#{$color}: #{$val};
+        }
+    }
+}

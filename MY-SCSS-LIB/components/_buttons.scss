@@ -1,0 +1,79 @@
+
+
+%btn-solid{ 
+    @include base_btn();
+    border-radius: 3px;
+    &:active{
+        transform: translateY(3px);
+        box-shadow: none;
+    } 
+}
+
+%btn-outlined{
+    @include base_btn();
+    background-color: #fff;
+    &:active{
+        transform: translateY(3px);
+        box-shadow: none;
+    }
+}
+
+
+.btn{
+    @include solid_btn(#e2e2e2);
+    &:active{
+        transform: translateY(3px);
+        box-shadow: none;
+    }
+}
+
+
+
+.btn-outlined{
+    @include outlined-btn(black);
+    &:active{
+        transform: translateY(3px);
+        box-shadow: none;
+    }
+}
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+// // solid button
+// .btn {
+//     @include base_btn;
+//     @include solid_btn; 
+//     transition: color .3s ease-out;
+//     box-shadow: 2px 2px #1b1b1b;
+//     &:active{
+//         box-shadow:none;
+//         transform: translate(2px, 2px);
+//     }
+//     &:hover{
+//         color: white;
+//     }
+// }
+
+// // outlined button
+// .btn-outlined{
+//     @include base_btn;
+//     @include outlined-btn;
+//     transition: .3s ease-out;
+
+    
+//     &:hover{
+//         text-decoration: none;
+//         background-color: black;
+//         color: white;
+//     }
+// }
+
+
+
+
+
+
+

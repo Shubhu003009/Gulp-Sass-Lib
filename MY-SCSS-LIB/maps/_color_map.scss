@@ -1,0 +1,59 @@
+$color_map: (
+    "Primary": $Primary,
+    "Secondary": $Secondary,
+
+    "Cherry-Red-Dark": $Cherry-Red,
+    "Off-White": $Off-White,
+
+    "Peach": $Peach,
+    "Burnt-Orange": $Burnt-Orange,
+
+    "Light-Blue": $Light-Blue,
+    "Dark-Blue": $Dark-Blue,
+    "Forest-Green": $Forest-Green,
+
+    "Cherry-Red": $Cherry-Red,
+    "Bubblegum-Pink": $Bubblegum-Pink,
+    
+    "Light-Purple": $Light-Purple,
+    "Mint": $Mint,
+    "Butter": $Butter,
+
+    "Island-Green": $Island-Green,
+    "Lil-White": $Lil-White,
+);
+
+
+$color-themes: (
+    theme-1:(
+        100: #990011,
+        200: #FCF6F5,
+    ),
+
+    theme-2:(
+        100: #FCEDDA,
+        200: #EE4E34,
+    ),
+
+    theme-3:(
+        100: #ADD8E6,
+        200: #00008B,
+        300: #3A6B35,
+    ),
+
+    theme-4:(
+        100: #CC313D,
+        200: #F7C5CC,
+    ),
+
+    theme-5:(
+        100: #AA96DA,
+        200: #C5FAD5,
+        300: #FFFFD2,
+    ),
+
+    theme-6:(
+        100: #2BAE66,
+        200: #FCF6F5,
+    ),
+)

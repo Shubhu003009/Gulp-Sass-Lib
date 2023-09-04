@@ -1,0 +1,40 @@
+
+
+// max-width:540px
+@include sm-max{
+
+    /* uncss:ignore */
+    .show-nav{
+        transform: translateX(-20px) translateY(46%) !important;
+    }
+
+    // BTT BUTTON
+    body{
+        .btt-btn{
+            font-size: 30px;
+            height: 35px;
+            padding: 3px 9px;
+            width: 35px;
+            bottom: 15px;
+            right: 15px;
+        }
+    }
+}
+
+
+// custom min-width:540px
+@include breakpoint(540px){
+    .navbar{
+        button{
+            display: none;
+        }
+        .toggle-nav{
+            display: none;
+        }
+    }
+}
+
+
+
+
+

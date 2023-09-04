@@ -1,0 +1,43 @@
+
+
+// font size
+@each $screen-size, $font-size in $tyle-scale{
+    @if $screen-size == small{
+        @each $size, $val in $font-size{
+            .fs-#{$size}{
+                font-size: #{$val};
+            };
+        }   
+    }@else{
+        @media (min-width:40em){
+            @each $size, $val in $font-size{
+                .fs-#{$size}{
+                    font-size: #{$val};
+                };
+            }
+        }
+    }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+// // font size
+// :root{
+    
+//     @each $screen-size, $font-size in $tyle-scale{
+//         @if $screen-size == small{
+//             @each $size, $val in $font-size{
+//                 --fs-#{$size}: #{$val};
+//             }   
+//         }@else{
+//             @media (min-width:40em){
+//                 @each $size, $val in $font-size{
+//                     --fs-#{$size}: #{$val};
+//                 }
+//             }
+//         }
+//     }
+// }
+
+

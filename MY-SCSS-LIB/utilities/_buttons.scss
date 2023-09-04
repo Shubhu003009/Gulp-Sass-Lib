@@ -1,0 +1,56 @@
+
+
+
+// MY BUTTONS
+@each $key, $val in $color_map{
+
+    .btn-#{$key}{
+        @include solid_btn($val);
+
+        @if($val == black){
+            box-shadow:2px 2px #ff6f8e;
+        };
+
+        &:hover{
+            background-color: lighten($val, 10);
+        };
+    };
+
+    .btn-outlined-#{$key} {
+        @include outlined_btn($val);
+
+        &:hover{
+            background-color: $val;
+        }
+    }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+// // BUTTONS
+// @each $key, $val in $color_map{
+
+//     .btn-#{$key}{
+//         @include solid_btn($val);
+//         box-shadow: 2px 2px #1b1b1b;
+
+//         @if($val == black){
+//             box-shadow:2px 2px #ff6f8e;
+//         };
+
+//         &:hover{
+//             background-color: lighten($val, 10);
+//         };
+//     };
+
+//     .btn-outlined-#{$key} {
+//         @include outlined-btn(#fff,#fff);
+//         border: 2px solid $val;
+
+//         &:hover{
+//             background-color: $val;
+//         }
+//     }
+// }
+

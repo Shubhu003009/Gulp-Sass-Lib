@@ -1,0 +1,30 @@
+%flex-layout{   // PLACEHOLDER - doesn't compiles/ output
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar{
+    @extend %flex-layout;
+    padding: $base-padding 0px;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    box-shadow: $base-box-shadow;
+    z-index: 999;
+
+    .site-title{
+        font-size: $font-size-l;
+    }
+
+    .container{
+        @extend %flex-layout;
+    }
+}
+
+
+
+
+
+

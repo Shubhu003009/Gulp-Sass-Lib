@@ -1,0 +1,56 @@
+
+
+// RAW-BASE-BTN ->>>
+@mixin base_btn(){
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    padding: $base-padding $base-padding * 2;
+    transition: .1s;
+    box-shadow: 2px 2px #1b1b1b;
+}
+
+
+
+@mixin solid_btn($btn-bg-color){
+    @extend %btn-solid;
+    background-color: $btn-bg-color;
+}
+
+
+@mixin outlined_btn($btn-outline-broder-color){
+    @extend %btn-outlined;
+    border: 2px solid $btn-outline-broder-color;
+}
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+// // BASE BUTTON
+// @mixin base_btn(){
+//     text-decoration: none;
+//     cursor: pointer;
+//     display: inline-block;
+//     padding: $base-padding $base-padding * 2;
+//     border-radius: $base-border-radius;
+// }
+
+// // SOLID BUTTON 
+// @mixin solid_btn($bg-color: #e2e2e2){
+//     @extend .btn;
+//     background-color: $bg-color;
+// }
+
+// // OUTLINED BUTTON
+// @mixin outlined-btn($outline-color: black,$bg-color: #e2e2e2){
+//     // @extend .btn;
+//     @extend .btn-outlined;
+//     background-color: $bg-color;
+//     border-radius: 0;
+//     border: $base-border-thickness solid $outline-color;
+// }
+
+
+

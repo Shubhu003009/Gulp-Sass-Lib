@@ -1,0 +1,61 @@
+
+// TEXT-COLOR (.text-COLORNAME)
+@each $key, $val in $color_map{
+
+    .text-#{$key}{
+        color: $val;
+    }
+
+    @if($val != black and $val != white){
+
+        //light variation
+        @for $color from 1 through 9 {
+            .text-#{$key}-light-#{$color}{
+                color: mix(white, $val, $color * 10);
+            }
+        }
+
+        //dark variation
+        @for $color from 1 through 9 {
+            .text-#{$key}-dark-#{$color}{
+                color: mix(black, $val, $color * 10);
+            }
+        }
+    }
+}
+
+// BG-COLOR (.bg-COLORNAME)
+@each $key, $val in $color_map{
+
+    .bg-#{$key}{
+        background-color: $val;
+    }
+
+    @if($val != black and $val != white){
+
+        //light variation
+        @for $color from 1 through 9 {
+            .bg-#{$key}-light-#{$color}{
+                background-color: mix(white, $val, $color * 10);
+            }
+        }
+
+        //dark variation
+        @for $color from 1 through 9 {
+            .bg-#{$key}-dark-#{$color}{
+                background-color: mix(black, $val, $color * 10);
+            }
+        }
+    }
+}
+
+// TEXT-HOVER (.text-hover-COLORNAME)
+@each $key, $val in $color_map{
+
+    .text-hover-#{$key}{
+        &:hover{
+            color: $val;
+        }
+    }
+}
+

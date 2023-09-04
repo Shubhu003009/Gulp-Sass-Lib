@@ -1,0 +1,8 @@
+
+// NAVBAR 
+@each $key, $val in $color_map{
+    .navbar-#{$key}{
+        @extend .navbar;
+        background-color: $val;
+    }
+}

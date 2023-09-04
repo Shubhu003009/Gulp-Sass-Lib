@@ -1,0 +1,26 @@
+// ALL IMPORTS
+
+// variables and functions
+@import 'variables/variables';
+
+// maps (all raw data)
+@import 'maps';
+
+// mixins (reusable code)
+@import 'mixins';
+
+// root
+@import 'root';
+
+// base & genral (css-reset,genral-files)
+@import 'base/base';
+@import 'genral/genral';
+
+// components (btns,navbar,card,etc)
+@import 'components';
+
+// utilities (generators)
+@import 'utilities';
+
+// media queries
+@import 'responsive';
