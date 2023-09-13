@@ -25,52 +25,68 @@ import purgecss from 'gulp-purgecss'
 
 
 
-// Functions: 
+//* ____Functions____ 
+
+
 
 // compiles scss
 function complieScss() {
-    return src('src/scss/style.scss')
+    return src('./src/scss/style.scss')
         .pipe(sass())
         .pipe(prefix())
-        .pipe(purgecss({
-          content: ['index.html']
-        }))
+        .pipe(purgecss({ content: ['./index.html'] }))
         .pipe(minfiy())
-        .pipe(dest('/dist/css'))
+        .pipe(dest('./dist/css'))
 }
+
+
 
 // minifies javascript
 function jsMin() {
-    return src('src/js/*.js')
+    return src('./src/js/*.js')
         .pipe(terser())
-        .pipe(dest('dist/js'))
-}   
+        .pipe(dest('./dist/js'))
+}
+
+
 
 // optimize the img
-function optimizeImg(){
-    return src('src/images/*.{.jpg,jpeg,png')
-        .pipe(imagemin([
-            imagemin.mozjpeg({ quality:80, progressive:true }),
-            imagemin.optipng({ optimizationLevel:2 }),
-        ]))
-        .pipe(dest('dist/images/optimizedImg'))
+async function optimizeImg(){
+    try {
+        return src('./src/images/*.{.jpg,jpeg,png')
+        // .pipe(imagemin([
+        //         imagemin.mozjpeg({ quality: 80, progressive: true }),
+        //         imagemin.optipng({ optimizationLevel: 2 }),
+        //     ]))
+        .pipe(imagemin())
+        .pipe(dest('./dist/images/optimizedImg'))
+    } catch (error) {
+        console.log("error ::: ",error)
+    }
 }
+
+
 
 // convert optimized img to webp
 function webpImg() {
-    return src('src/images/*.jpg,jepg,png')
+    return src('./src/images/*.jpg,jepg,png')
         .pipe(imgaewebp())
-        .pipe(dest('dist/images/optimizedWebp'))
+        .pipe(dest('./dist/images/optimizedWebp'))
 }
+
+
 
 // watch all changes
 function watchTask(){
-    watch(['src/scss/*.scss'], complieScss)
-    watch(['src/js/*.js'], jsMin)
-    watch(['src/images/*.{jpg,jpeg,png}'], optimizeImg)
-    watch(['src/images/*.{jpg,jpeg,png}'], webpImg)
+    watch(['./src/scss/*.scss'], complieScss)
+    watch(['./src/js/*.js'], jsMin)
+    watch(['./src/images/*.{jpg,jpeg,png}'], optimizeImg)
+    watch(['./src/images/*.{jpg,jpeg,png}'], webpImg)
 }
 
+
+
+// EXPORT
 export default series(
     complieScss,
     jsMin,
@@ -78,28 +94,9 @@ export default series(
     webpImg,
     watchTask
 )
-// EXPORT
-// exports.default = series(
-//     complieScss,
-//     jsMin,
-//     optimizeImg,
-//     webpImg,
-//     watchTask
-// )
-// exports = {
-//     complieScss,
-//     jsMin,
-//     optimizeImg,
-//     webpImg,
-//     watchTask
-// }
-// module.exports = series(
-//     complieScss,
-//     jsMin,
-//     optimizeImg,
-//     webpImg,
-//     watchTask
-// )
+
+
+
 
 
 

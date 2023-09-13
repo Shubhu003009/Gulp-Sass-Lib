@@ -1,0 +1,16 @@
+
+@each $theme, $map in $color-themes{
+    @each $val, $color in $map{
+        .#{$theme}-#{$val}{
+            color: #{$color};
+        }
+    }
+}
+
+@each $theme, $map in $color-themes{
+    @each $val, $color in $map{
+        .bg-#{$theme}-#{$val}{
+            background-color: #{$color};
+        }
+    }
+}
